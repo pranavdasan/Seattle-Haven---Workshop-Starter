@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3]
+[ext_resource type="Script" path="res://scripts/helper.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/collectibles/helper.png" id="2"]
+[sub_resource type="CircleShape2D" id="shape"]
+radius = 16.0
+[node name="Helper" type="Area2D" groups=["helpers"]]
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("1")
+modulate = Color(0.63, 0.77, 0.85, 0.35)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2")
+scale = Vector2(0.95, 0.95)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("shape")
